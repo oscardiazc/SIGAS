@@ -1,0 +1,114 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"sigas"},
+{"type":"table","name":"administradores","database":"sigas","data":
+[
+{"id":"4","rut":"203759355","nombre":"Administrador SIGAS","correo":"admin@centrodesalud.cl","foto_perfil":"assets\/img\/perfiles\/admin_1789657268_6aac00b42956e.png","password_hash":"$2y$10$HsS\/ovZq.lLCL8OW158YV.dCFIUKCrv12bP6U5Nq6tCtlpBkrpq\/u","token_recuperacion":null,"expiracion_token":null,"created_at":"2026-09-04 13:40:59"},
+{"id":"8","rut":"163859602","nombre":"Paulina Araya","correo":"","foto_perfil":null,"password_hash":"$2y$10$UcehClHUtyanUt8GXmlJwOmbFhl\/z\/whEK.uokGo.Ek7xD.Pxrm.6","token_recuperacion":null,"expiracion_token":null,"created_at":"2026-09-25 10:31:08"},
+{"id":"9","rut":"151304168","nombre":"Edwin Benitez","correo":"","foto_perfil":null,"password_hash":"$2y$10$VF7bvkI0JPsM0mpgmuF0GuLPN\/KZmBUD8am4bFQBkPPlT5y8T.Dsi","token_recuperacion":null,"expiracion_token":null,"created_at":"2026-09-25 10:31:26"}
+]
+}
+,{"type":"table","name":"auditoria_administradores","database":"sigas","data":
+[
+{"id":"1","administrador_id":"4","accion":"AGENDAR","detalle":"Cita ID 1 creada para Box 1 el dia 2026-09-04 de 08:00 a 08:30","fecha_hora":"2026-09-04 14:12:44"},
+{"id":"2","administrador_id":"4","accion":"AGENDAR","detalle":"Cita ID 2 creada para Box 1 el dia 2026-09-04 de 08:00 a 08:20","fecha_hora":"2026-09-04 14:14:21"},
+{"id":"3","administrador_id":"4","accion":"ELIMINAR","detalle":"Elimino cita ID 2 (Box 1 fecha 2026-09-04 a las 08:00:00)","fecha_hora":"2026-09-04 14:14:35"},
+{"id":"4","administrador_id":"4","accion":"DERIVACION","detalle":"Paciente 20.740.081-5 derivado a Mamografia","fecha_hora":"2026-09-04 14:15:08"},
+{"id":"5","administrador_id":"4","accion":"AGENDAR","detalle":"Cita ID 3 creada para Box 1 el dia 2026-09-04 de 08:40 a 08:50","fecha_hora":"2026-09-04 14:26:37"},
+{"id":"6","administrador_id":"4","accion":"AGENDAR","detalle":"Cita ID 4 creada para Box 1 el dia 2026-09-04 de 08:40 a 09:00","fecha_hora":"2026-09-04 14:27:27"},
+{"id":"7","administrador_id":"4","accion":"AGENDAR","detalle":"Agendó cita ID 5: Paciente RUT 20.740.081-5 en Box 4 el 2026-09-04 (10:00 a 11:00)","fecha_hora":"2026-09-04 16:51:59"},
+{"id":"8","administrador_id":"4","accion":"AGENDAR","detalle":"Reserva de Box 3 por Edwin (2026-09-09 10:00 - 13:00)","fecha_hora":"2026-09-09 09:15:03"},
+{"id":"9","administrador_id":"4","accion":"AGENDAR","detalle":"Agendó cita ID 7: Paciente RUT 20740081-5 en Box 2 el 2026-09-16 (12:00 a 13:00)","fecha_hora":"2026-09-16 09:56:20"},
+{"id":"10","administrador_id":"4","accion":"AGENDAR","detalle":"Reserva de Box 2 por Prueba (2026-09-16 09:00 - 11:00)","fecha_hora":"2026-09-16 09:57:56"},
+{"id":"11","administrador_id":"4","accion":"EDITAR_ADMIN","detalle":"Modificó al administrador ID 4: Administrador SIGAS (203759355)","fecha_hora":"2026-09-16 09:59:11"},
+{"id":"12","administrador_id":"4","accion":"AGENDAR","detalle":"Agendó cita ID 9: Paciente RUT 215742245 en Box 4 el 2026-09-16 (15:00 a 16:00)","fecha_hora":"2026-09-16 10:49:04"},
+{"id":"13","administrador_id":"4","accion":"AGENDAR","detalle":"Agendó cita ID 10: Paciente RUT 20740081-5 en Box 4 el 2026-09-16 (09:00 a 10:00)","fecha_hora":"2026-09-16 16:40:25"},
+{"id":"14","administrador_id":"4","accion":"AGENDAR","detalle":"Agendó cita ID 11: Paciente RUT 22704698-8 en Box 4 el 2026-09-17 (14:00 a 15:00)","fecha_hora":"2026-09-17 11:55:54"},
+{"id":"15","administrador_id":"4","accion":"EDITAR_ADMIN","detalle":"Modificó al administrador ID 4: Administrador SIGAS (203759355)","fecha_hora":"2026-09-17 12:01:08"},
+{"id":"16","administrador_id":"4","accion":"MAMOGRAFIA","detalle":"Cambio de estado a 'solicitada' en derivacion ID 1","fecha_hora":"2026-09-24 14:50:39"},
+{"id":"17","administrador_id":"4","accion":"MAMOGRAFIA","detalle":"Cambio de estado a 'agendada' en derivacion ID 1","fecha_hora":"2026-09-24 14:50:41"},
+{"id":"18","administrador_id":"4","accion":"MAMOGRAFIA","detalle":"Cambio de estado a 'lista de espera' en derivacion ID 1","fecha_hora":"2026-09-24 14:50:46"},
+{"id":"19","administrador_id":"4","accion":"AGENDAR_CITA","detalle":"Cita agendada para RUT 20.740.081-5 en Box 1 el 2026-09-24 (10:00 a 10:30)","fecha_hora":"2026-09-24 15:13:02"},
+{"id":"20","administrador_id":"4","accion":"CITA_SOBRECUPO","detalle":"Cita agendada para RUT 20.740.081-5 en Box 1 el 2026-09-24 (10:00 a 10:30)","fecha_hora":"2026-09-24 15:21:18"},
+{"id":"21","administrador_id":"4","accion":"AGENDAR_CITA","detalle":"Cita agendada para RUT 20.740.081-5 en Box 1 el 2026-09-25 (14:00 a 14:30)","fecha_hora":"2026-09-25 09:05:12"},
+{"id":"22","administrador_id":"4","accion":"CITA_SOBRECUPO","detalle":"Cita agendada para RUT 20.740.081-5 en Box 1 el 2026-09-25 (14:00 a 14:30)","fecha_hora":"2026-09-25 09:05:47"},
+{"id":"23","administrador_id":"4","accion":"ELIMINAR_PACIENTE","detalle":"Eliminó la ficha del paciente: Martin Astorga (22704698-8)","fecha_hora":"2026-09-25 09:24:02"},
+{"id":"24","administrador_id":"4","accion":"ELIMINAR_PACIENTE","detalle":"Eliminó la ficha del paciente: martina martinez (215742245)","fecha_hora":"2026-09-25 09:24:12"},
+{"id":"25","administrador_id":"4","accion":"AGENDAR_CITA","detalle":"Cita agendada para RUT 20375935-5 en Box 1 el 2026-09-25 (08:40 a 08:50)","fecha_hora":"2026-09-25 09:31:13"},
+{"id":"26","administrador_id":"4","accion":"ELIMINAR_PACIENTE","detalle":"Eliminó la ficha del paciente: OSCAR JOSÉ DIAZ CABRERA (20375935-5)","fecha_hora":"2026-09-25 09:33:36"},
+{"id":"27","administrador_id":"4","accion":"ELIMINAR_PACIENTE","detalle":"Eliminó la ficha del paciente: Usuario Prueba a (20.740.081-5)","fecha_hora":"2026-09-25 09:34:12"},
+{"id":"28","administrador_id":"4","accion":"ELIMINAR_PACIENTE","detalle":"Eliminó la ficha del paciente: Prueba Usuario (20740081-5)","fecha_hora":"2026-09-25 09:34:24"},
+{"id":"29","administrador_id":"4","accion":"CREAR_ESP","detalle":"Registró especialista: Especialista Prueba (123456789)","fecha_hora":"2026-09-25 09:50:21"},
+{"id":"30","administrador_id":"4","accion":"CREAR_ADMIN","detalle":"Creó al administrador: PRUEBA (123456789)","fecha_hora":"2026-09-25 10:05:03"},
+{"id":"31","administrador_id":"4","accion":"CREAR_ADMIN","detalle":"Creó al administrador: Paulina Araya (163859602)","fecha_hora":"2026-09-25 10:31:08"},
+{"id":"32","administrador_id":"4","accion":"CREAR_ADMIN","detalle":"Creó al administrador: Edwin (123123123)","fecha_hora":"2026-09-25 10:31:26"},
+{"id":"33","administrador_id":"4","accion":"ELIMINAR_ADMIN","detalle":"Eliminó la cuenta de: PRUEBA (123456789)","fecha_hora":"2026-09-25 10:31:51"},
+{"id":"34","administrador_id":"4","accion":"EDITAR_ADMIN","detalle":"Modificó al administrador ID 9: Edwin Benitez (151304168)","fecha_hora":"2026-09-25 10:34:00"}
+]
+}
+,{"type":"table","name":"boxes","database":"sigas","data":
+[
+{"id":"1","numero_box":"1","nombre":"Box Procedimientos","activo":"1"},
+{"id":"2","numero_box":"2","nombre":"Box Dental","activo":"1"},
+{"id":"3","numero_box":"3","nombre":"Box Médico","activo":"1"},
+{"id":"4","numero_box":"4","nombre":"Box Salud Mental","activo":"1"},
+{"id":"5","numero_box":"5","nombre":"Box Rehabilitacion","activo":"1"}
+]
+}
+,{"type":"table","name":"citas","database":"sigas","data":
+[
+{"id":"6","paciente_id":"2","box_id":"3","especialista_id":null,"tipo_atencion_id":"8","fecha":"2026-09-09","hora_inicio":"10:00:00","hora_fin":"13:00:00","es_sobrecupo":"0","estado":"confirmada","created_at":"2026-09-09 09:15:03"},
+{"id":"8","paciente_id":"4","box_id":"2","especialista_id":null,"tipo_atencion_id":"8","fecha":"2026-09-16","hora_inicio":"09:00:00","hora_fin":"11:00:00","es_sobrecupo":"0","estado":"confirmada","created_at":"2026-09-16 09:57:56"}
+]
+}
+,{"type":"table","name":"especialistas","database":"sigas","data":
+[
+{"id":"1","nombre":"Paulina Araya","rut":"11111111-1","cargo_titulo":"Enfermera","foto_perfil":null,"activo":"1"},
+{"id":"2","nombre":"Lorena Grandón","rut":"22222222-2","cargo_titulo":"Enfermera","foto_perfil":null,"activo":"1"},
+{"id":"3","nombre":"Nydia Arias","rut":"33333333-3","cargo_titulo":"Dentista","foto_perfil":null,"activo":"1"},
+{"id":"4","nombre":"Milton Arias","rut":"44444444-4","cargo_titulo":"Médico","foto_perfil":null,"activo":"1"},
+{"id":"5","nombre":"Leonora","rut":"55555555-5","cargo_titulo":"Psiquiatra","foto_perfil":null,"activo":"1"},
+{"id":"6","nombre":"Marta Carvajal","rut":"66666666-6","cargo_titulo":"Psicóloga","foto_perfil":null,"activo":"1"},
+{"id":"7","nombre":"Especialista Kinesiología","rut":"77777777-7","cargo_titulo":"Kinesiólogo","foto_perfil":null,"activo":"1"},
+{"id":"8","nombre":"Especialista Prueba","rut":"123456789","cargo_titulo":"SI","foto_perfil":null,"activo":"1"}
+]
+}
+,{"type":"table","name":"mamografias","database":"sigas","data":
+[
+
+]
+}
+,{"type":"table","name":"pacientes","database":"sigas","data":
+[
+{"id":"2","rut":"SALA-54bd891","folio":null,"nombre":"Edwin","apellidos":"(Uso de Sala)","correo":"sin_correo@centro.cl","telefono":"000000000","seccion_unidad":"Uso Interno","prevision":"PARTICULAR","created_at":"2026-09-09 09:15:03"},
+{"id":"4","rut":"SALA-4c76821","folio":null,"nombre":"Prueba","apellidos":"(Uso de Sala)","correo":"sin_correo@centro.cl","telefono":"000000000","seccion_unidad":"Uso Interno","prevision":"PARTICULAR","created_at":"2026-09-16 09:57:56"}
+]
+}
+,{"type":"table","name":"tipos_atencion","database":"sigas","data":
+[
+{"id":"1","box_id":"1","nombre":"Toma de Muestras","duracion_minutos":"10","color_hex":"#00BCD4"},
+{"id":"2","box_id":"1","nombre":"EMP","duracion_minutos":"30","color_hex":"#4CAF50"},
+{"id":"3","box_id":"2","nombre":"Dental","duracion_minutos":"60","color_hex":"#E91E63"},
+{"id":"4","box_id":"3","nombre":"Morbilidad","duracion_minutos":"20","color_hex":"#2196F3"},
+{"id":"5","box_id":"3","nombre":"Certificados","duracion_minutos":"10","color_hex":"#FF9800"},
+{"id":"6","box_id":"4","nombre":"Salud Mental USIT","duracion_minutos":"60","color_hex":"#9C27B0"},
+{"id":"7","box_id":"5","nombre":"Kinesiología","duracion_minutos":"30","color_hex":"#009688"},
+{"id":"8","box_id":"1","nombre":"Reserva de Box \/ Sala","duracion_minutos":"60","color_hex":"#4A5568"}
+]
+}
+,{"type":"table","name":"tipo_atencion_especialistas","database":"sigas","data":
+[
+{"tipo_atencion_id":"1","especialista_id":"1"},
+{"tipo_atencion_id":"1","especialista_id":"2"},
+{"tipo_atencion_id":"2","especialista_id":"1"},
+{"tipo_atencion_id":"2","especialista_id":"2"},
+{"tipo_atencion_id":"3","especialista_id":"3"},
+{"tipo_atencion_id":"4","especialista_id":"4"},
+{"tipo_atencion_id":"5","especialista_id":"4"},
+{"tipo_atencion_id":"6","especialista_id":"5"},
+{"tipo_atencion_id":"6","especialista_id":"6"},
+{"tipo_atencion_id":"7","especialista_id":"7"},
+{"tipo_atencion_id":"7","especialista_id":"8"}
+]
+}
+]
