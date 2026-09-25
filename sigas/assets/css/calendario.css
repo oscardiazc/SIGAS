@@ -1,0 +1,304 @@
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS DE CALENDARIO, FORMULARIO SUPERIOR Y GRILLAS (SIGAS)
+   ========================================================================== */
+
+/* CONTENEDOR GENERAL VERTICAL */
+.dashboard-layout-vertical {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: calc(100vh - 60px - 38px);
+    overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   PANEL SUPERIOR: FORMULARIO DE AGENDAMIENTO
+   -------------------------------------------------------------------------- */
+.panel-agendamiento-top {
+    background: #ffffff;
+    padding: 12px 20px;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.panel-agendamiento-header h3 {
+    font-size: 14px;
+    color: #1a365d;
+    margin-bottom: 10px;
+}
+
+/* Fila 1: Pacientes (7 columnas niveladas) */
+.form-grid-fila {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Fila 2: Box, Fechas y Botón (alineación en la base común) */
+.form-grid-fila.fila-inferior {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 0;
+}
+
+.form-box-inline {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    flex: 1;
+}
+
+.form-box-inline .form-group {
+    margin-bottom: 0;
+}
+
+.form-box-inline .campo-extendido {
+    flex: 1.6;
+}
+
+/* Checkboxes alineados a los 36px del input */
+.checkbox-inline-wrap input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-inline-wrap label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: normal;
+    min-height: unset;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.btn-agendar-wrap {
+    margin-bottom: 0;
+    min-width: 170px;
+}
+
+.btn-agendar-wrap .btn {
+    height: 36px;
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   PANEL INFERIOR: CONTENEDOR Y GRILLA HORARIA
+   -------------------------------------------------------------------------- */
+.panel-grilla-bottom,
+.panel-grilla {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 20px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.grilla-header-info {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grilla-header-info h2 {
+    font-size: 16px;
+    color: #2d3748;
+}
+
+.contenedor-horario-scroll {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    position: relative;
+}
+
+/* 1 Columna fija de hora (80px) + 5 Columnas de Box / Días */
+.grilla-boxes-dia {
+    display: grid;
+    grid-template-columns: 80px repeat(5, 1fr);
+    min-width: 900px;
+}
+
+/* Cabeceras unificadas a 48px para evitar cualquier descuadre de altura */
+.header-columna-tiempo,
+.columna-box-header {
+    background: #2d3748;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    height: 48px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px solid #1a202c;
+}
+
+.header-columna-tiempo {
+    border-right: 1px solid #4a5568;
+}
+
+/* Columna lateral de horas */
+.columna-horas-lateral {
+    border-right: 1px solid #cbd5e0;
+    background: #edf2f7;
+}
+
+/* Centrado exacto horizontal y vertical de la etiqueta horaria */
+.bloque-etiqueta-hora {
+    height: 70px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #4a5568;
+    border-bottom: 1px solid #cbd5e0;
+}
+
+/* Columnas de los Boxes / Días */
+.columna-box {
+    border-right: 1px solid #e2e8f0;
+    background: #ffffff;
+    position: relative;
+}
+
+.columna-box:last-child {
+    border-right: none;
+}
+
+/* Cuerpo sincronizado: 9 bloques de 70px = 630px */
+.columna-box-cuerpo {
+    position: relative;
+    height: 630px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    background-size: 100% 70px;
+    background-image: linear-gradient(to bottom, transparent 69px, #e2e8f0 70px);
+}
+
+/* --------------------------------------------------------------------------
+   BLOQUES DE CITA PARALELOS (NORMAL Y SOBRECUPO LADO A LADO)
+   -------------------------------------------------------------------------- */
+.bloque-cita {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 3px 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.bloque-cita:hover {
+    transform: scale(1.02);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    z-index: 10;
+}
+
+/* Cita normal cuando comparte horario con un sobrecupo (mitad izquierda) */
+.bloque-cita.con-sobrecupo {
+    left: 2px;
+    right: auto;
+    width: calc(50% - 3px);
+}
+
+/* Cita de sobrecupo (mitad derecha fija con borde rojo marcado) */
+.bloque-cita.sobrecupo {
+    left: auto;
+    right: 2px;
+    width: calc(50% - 3px);
+    border: 2px solid #e53e3e;
+    background-clip: padding-box;
+    z-index: 3;
+}
+
+/* --------------------------------------------------------------------------
+   LEYENDA INFERIOR
+   -------------------------------------------------------------------------- */
+.leyenda-atenciones {
+    display: flex;
+    gap: 20px;
+    padding-top: 8px;
+    margin-top: 6px;
+    border-top: 1px solid #e2e8f0;
+    flex-wrap: wrap;
+}
+
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #4a5568;
+}
+
+.color-box {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   MODAL DE DETALLE Y CONFIRMACIÓN
+   -------------------------------------------------------------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 6px;
+    width: 440px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.modal-contenido h3 {
+    margin-bottom: 14px;
+    color: #1a365d;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 6px;
+}
+
+.modal-acciones {
+    margin-top: 18px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
